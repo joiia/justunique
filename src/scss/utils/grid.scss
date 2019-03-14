@@ -1,0 +1,39 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	padding: 0 15px;
+	margin: 0 auto;
+	
+	@include atS {
+		max-width: 540px;
+	}
+
+	@include atM {
+		max-width: 720px;
+	}
+
+	@include atL {
+		max-width: 960px;
+	}
+
+	@include atXL {
+		max-width: 1140px;
+	}
+}
+
+.container-fluid {
+	width: 100%;
+	max-width: 100%;
+}
+
+.row {
+	display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col {
+	flex-grow: 1;
+	flex-basis: 0;
+	padding: 0 15px;
+}
