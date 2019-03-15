@@ -1,0 +1,29 @@
+.about {
+	line-height: 1.5;
+	padding: 50px 15px;
+
+	@include atS {
+		padding-top: 70px;
+	}
+
+	@include atXL {
+		padding-left: 470px;
+		padding-top: 50px;
+	}
+
+	&__col {
+		
+	}
+
+	&__col--1 {
+		padding-right: 30px;
+	}
+
+	&__col--2 {
+		display: none;
+
+		@include atS {
+			display: block;
+		}
+	}
+}

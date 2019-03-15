@@ -1,0 +1,57 @@
+.menu {
+	
+	&__burger {
+		position: relative;
+		cursor: pointer;
+		width: 33px;
+		height: 17px;
+
+		@include atL {
+			margin: 0 auto;
+			width: 43px;
+		}
+	}
+
+	&__bar {
+		height: 3px;
+		width: 33px;
+		background: #fff;
+		position: absolute;
+		top: 7px;
+		left: 0;
+
+		@include atL {
+			width: 43px;
+			top: 9px;
+		}
+
+		&:first-child {
+			width: 18px;
+			top: 0;
+
+			@include atL {
+				width: 27px;
+			}
+		}
+
+		&:last-child {
+			width: 25px;
+			top: 14px;
+
+			@include atL {
+				top: 18px;
+				width: 35px;
+			}
+		}
+	}
+
+	&__contact--rt {
+		font-size: rem(14);
+		transform: rotate(-90deg);
+		white-space: nowrap;
+		position: absolute;
+		bottom: 24px;
+		left: 38px;
+		transform-origin: left top;
+	}
+}

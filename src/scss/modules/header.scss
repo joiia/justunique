@@ -1,3 +1,15 @@
 header {
-	
+	height: 51px;
+	padding: 17px 0;
+	background: $primary;
+
+	@include atL {
+		position: fixed;
+		width: 100px;
+		height: 100%;
+		padding: 40px 0;
+		top: 0;
+		left: 0;
+		z-index: 10000;
+	}
 }

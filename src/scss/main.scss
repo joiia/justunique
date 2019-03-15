@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:300,400,600,800&subset=cyrillic');
+
 @import "utils/libs";
 @import "utils/vars";
 @import "utils/mixins";
@@ -5,3 +7,13 @@
 @import "utils/global";
 @import "utils/grid";
 
+@import "modules/header";
+@import "modules/section";
+@import "modules/dots";
+@import "modules/link";
+@import "modules/menu";
+@import "modules/logo";
+@import "modules/about";
+
+
+@import "modules/footer";

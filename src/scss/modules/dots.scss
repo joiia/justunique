@@ -1,0 +1,79 @@
+.dots {
+	position: absolute;
+	background: url('/assets/img/dot.svg');
+	@include size(100px, 80px);
+	background-size: 12px;
+	z-index: 1;
+
+	&--main-top {
+		width: 100px;
+		height: 60px;
+		top: 0;
+		right: 0;
+
+		@include atM {
+			@include size(300px, 120px);
+		}
+	}
+
+	&--main-bottom {
+		@include size(120px, 84px);
+		bottom: 0;
+		left: 0;
+
+		@include atM {
+			@include size(270px, 320px);
+			background-size: 18px;
+			bottom: -180px;
+		}
+	}
+
+	&--color {
+		background: url('/assets/img/dot-color.svg');
+	}
+
+	&--single {
+		@include size(12px);
+
+		&--1 {
+			top: 36px;
+			left: 36px;
+
+			@include atM {
+				top: 36px;
+				left: 144px;
+			}
+		}
+
+		&--2 {
+			display: none;
+
+			@include atM {
+				display: block;
+				top: 84px;
+				left: 240px;
+			}
+		}
+
+		&--3 {
+			top: 36px;
+			left: 24px;
+
+			@include atL {
+				top: 90px;
+				left: 162px;
+				@include size(18px);
+				background-size: 18px;
+			}
+		}
+
+		&--4 {
+			top: 60px;
+			left: 48px;
+
+			@include atL {
+				display: none;
+			}
+		}
+	}
+}

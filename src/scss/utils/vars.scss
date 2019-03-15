@@ -1,12 +1,21 @@
 // Font
-$mainFont                : 'Montserrat', Helvetica, Arial, sans-serif;
+$titleFont               : 'Montserrat', Helvetica, Arial, sans-serif;
+$mainFont			 	 : 'Merriweather', serif;
+
+$mainFontSize            : 16px;
 
 // Window Width
-$largeDesktop            : 1440px;
+$extraLargeDesktop       : 1440px;
+$largeDesktop            : 1366px;
 $desktop                 : 1200px;
 $smallDesktop            : 992px;
 $tablet                  : 768px;
 $phone                   : 576px;
 
 // Colors
-$grey                    : #181229;
+$primary                 : #1C0FD5;
+$primary-l				 : #C6C3F3;
+$accent 				 : #abd2ca;
+$grey					 : #e2e0e1;
+$grey-d					 : #b2b2b2;
+$grey-l 				 : #f8f8f8;

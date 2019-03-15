@@ -15,40 +15,47 @@
   height: $height;
 }
 
-@mixin size($width,$height: $width) {
-  width: $width;
-  height: $height;
+@mixin centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
-@mixin atS() {
+@mixin atXS() {
     @media only screen and (min-width: $phone) {
         @content;
     }
 }
 
-@mixin atM() {
+@mixin atS() {
     @media only screen and (min-width: $tablet) {
         @content;
     }
 }
 
-@mixin atL() {
+@mixin atM() {
     @media only screen and (min-width: $smallDesktop) {
         @content;
     }
 }
 
-@mixin atXL() {
+@mixin atL() {
     @media only screen and (min-width: $desktop) {
         @content;
     }
 }
 
-@mixin atXXL() {
+@mixin atXL() {
     @media only screen and (min-width: $largeDesktop) {
         @content;
     }
 }
+
+
+
+
+
 
 @mixin placeholder {
   ::-webkit-input-placeholder {@content}

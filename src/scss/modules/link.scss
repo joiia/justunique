@@ -1,0 +1,21 @@
+.link {
+	cursor: pointer;
+	//text-decoration: underline;
+	&:after {
+		content: '';
+		@include size(100%, 1px);
+		position: absolute;
+		left: 0;
+		bottom: -2px;
+		display: block;
+	}
+
+	&--primary-l {
+		color: $primary-l;
+		&:after { 
+			background: $primary-l;
+		}
+	}
+
+
+}
