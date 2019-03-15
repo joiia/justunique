@@ -52,6 +52,12 @@
     }
 }
 
+@mixin atXXL() {
+    @media only screen and (min-width: $extraLargeDesktop) {
+        @content;
+    }
+}
+
 
 
 
