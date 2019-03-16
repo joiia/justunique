@@ -28,6 +28,53 @@
 		}
 	}
 
+	&--ft-top {
+		@include size(120px, 24px);
+		top: 0;
+		left: 0;
+
+		@include atM {
+			@include size(268px, 168px);
+			background-size: 18px;
+		}
+	}
+
+	&--ft-bottom {
+		@include size(120px, 24px);
+		bottom: 0;
+		right: 0;
+
+		@include atM {
+			@include size(268px, 268px);
+			background-size: 18px;
+			bottom: -80px;
+		}
+	}
+
+	&--prc-top {
+		@include size(120px, 24px);
+		top: 0;
+		right: 0;
+
+		@include atM {
+			@include size(268px, 268px);
+			background-size: 18px;
+			bottom: -80px;
+		}
+	}
+
+	&--prc-bottom {
+		@include size(120px, 48px);
+		bottom: 0;
+		right: left;
+
+		@include atM {
+			@include size(268px, 268px);
+			background-size: 18px;
+			bottom: -80px;
+		}
+	}
+
 	&--color {
 		background: url('/assets/img/dot-color.svg');
 	}
@@ -137,5 +184,37 @@
 			bottom: -24px;
 		}
 
+	}
+
+	&--line {
+		width: 6px;
+		height: 6px;
+		background: $accent;
+		border-radius: 50%;
+		position: relative;
+		margin: 0 auto;
+		margin-bottom: 30px;
+		display: none;
+
+		@include atL {
+			display: block;
+		}
+
+		&:before, &:after {
+			content: "";
+			width: 6px;
+			height: 6px;
+			background: $grey;
+			border-radius: 50%;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -12px;
+		}
+
+		&:after {
+			left: inherit;
+			right: -12px;
+		}
 	}
 }

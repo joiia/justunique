@@ -2,7 +2,7 @@
  	transition: transform .5s;
  	font-size: rem(24);
  	line-height: 1;
- 	padding-bottom: 20px;
+ 	padding-bottom: 25px;
  	//transform: translate3d(10px,0,0) scale(.85) rotate(.0001deg);
 
  	@include atL {
@@ -12,5 +12,19 @@
 
  	.show {
  		//transform: translateZ(0) scale(1) rotate(.0001deg);
+ 	}
+
+ 	&--l {
+ 		font-size: rem(36);
+ 		padding-bottom: 60px;
+
+ 		@include atL {
+ 			font-size: rem(50);
+ 			padding-bottom: 80px;
+ 		}
+ 	}
+
+ 	&--regular {
+ 		font-weight: 600;
  	}
  }

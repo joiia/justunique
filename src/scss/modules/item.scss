@@ -1,4 +1,13 @@
 .item {
+	&:last-child {
+		margin-bottom: 0 !important;
+		padding-bottom: 0 !important;
+	}
+
+	&--mb-m {
+		margin-bottom: 50px;
+	}
+
 	&--mb-l {
 		margin-bottom: 80px;
 
@@ -7,12 +16,20 @@
 		}
 
 		@include atL {
-			margin-bottom: 160px;
+			margin-bottom: 170px;
 		}
+	}
+
+	&--brd {
+		border-bottom: 1px solid $grey;
 
 		&:last-child {
-			margin-bottom: 0;
+			border: none !important;
 		}
-		
 	}
+
+	&--pb-m {
+		padding-bottom: 25px;
+	}
+
 }
