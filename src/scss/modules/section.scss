@@ -56,4 +56,13 @@
 		}
 	}
 
+	&--p-l {
+		padding: 60px 0;
+
+		@include atXL {
+			padding: 120px 0;
+		}
+
+	}
+
 }

@@ -24,12 +24,18 @@
 	}
 }
 
-.container-fluid {
+.container--fluid {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	max-width: 100%;
 	padding: 0 20px;
+}
+
+.container--narrow {
+	@include atL {
+		max-width: 840px;
+	}
 }
 
 .row {
