@@ -1,7 +1,7 @@
 .dots {
 	position: absolute;
 	background: url('/assets/img/dot.svg');
-	@include size(100px, 80px);
+	@include size(98px, 86px);
 	background-size: 12px;
 	z-index: 1;
 
@@ -22,9 +22,9 @@
 		left: 0;
 
 		@include atM {
-			@include size(270px, 320px);
+			@include size(268px, 268px);
 			background-size: 18px;
-			bottom: -180px;
+			bottom: -88px;
 		}
 	}
 
@@ -75,5 +75,67 @@
 				display: none;
 			}
 		}
+	}
+
+	&--ft-1 {
+		height: 120px;
+		bottom: 24px;
+		left: -36px;
+
+		@include atS {
+			bottom: -10px;
+			left: 96px;
+		}
+
+		@include atL {
+			height: 96px;
+			width: 144px;
+			left: 96px;
+			bottom: -24px;
+		}
+	}
+
+	&--ft-2 {
+		height: 120px;
+		bottom: 24px;
+		right: -31px;
+
+		@include atS {
+			bottom: -14px;
+			right: -12px;
+		}
+
+		@include atM {
+			bottom: -14px;
+			right: 162px;
+		}
+
+		@include atL {
+			height: 96px;
+			width: 144px;
+			right: 24px;
+			bottom: -30px;
+		}
+	}
+
+	&--ft-3 {
+		height: 120px;
+		bottom: 42px;
+		left: -24px;
+
+		@include atS {
+			height: 76px;
+			bottom: -10px;
+			left: 79px;
+			width: 108px;
+		}
+
+		@include atL {
+			height: 76px;
+			width: 178px;
+			left: 61px;
+			bottom: -24px;
+		}
+
 	}
 }

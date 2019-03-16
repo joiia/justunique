@@ -1,5 +1,18 @@
 .item {
 	&--mb-l {
-		margin-bottom: 90px;
+		margin-bottom: 80px;
+
+		@include atS {
+			margin-bottom: 100px;
+		}
+
+		@include atL {
+			margin-bottom: 160px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+		
 	}
 }

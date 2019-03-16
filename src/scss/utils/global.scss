@@ -45,4 +45,11 @@ ul, li {
   background: $primary;
   color: #fff;
   padding: 2px 3px;
+  margin: 0 3px;
+}
+
+.cen-v {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }

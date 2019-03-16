@@ -1,6 +1,8 @@
 .section {
 	position: relative;
 	padding: 40px 0;
+	overflow-x: visible;
+	overflow-y: hidden;
 
 	@include atL {
 		margin-left: 100px;
@@ -59,8 +61,12 @@
 	&--p-l {
 		padding: 60px 0;
 
+		@include atL {
+			padding: 140px 0;
+		}
+
 		@include atXL {
-			padding: 120px 0;
+			padding: 140px 0;
 		}
 
 	}
