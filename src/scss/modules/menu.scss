@@ -1,49 +1,4 @@
 .menu {
-	
-	&__burger {
-		position: relative;
-		cursor: pointer;
-		width: 33px;
-		height: 17px;
-
-		@include atL {
-			margin: 0 auto;
-			width: 43px;
-		}
-	}
-
-	&__bar {
-		height: 3px;
-		width: 33px;
-		background: #fff;
-		position: absolute;
-		top: 7px;
-		left: 0;
-
-		@include atL {
-			width: 43px;
-			top: 9px;
-		}
-
-		&:first-child {
-			width: 18px;
-			top: 0;
-
-			@include atL {
-				width: 27px;
-			}
-		}
-
-		&:last-child {
-			width: 25px;
-			top: 14px;
-
-			@include atL {
-				top: 18px;
-				width: 35px;
-			}
-		}
-	}
 
 	&__contact--rt {
 		font-size: rem(14);
@@ -53,18 +8,26 @@
 		bottom: 24px;
 		left: 38px;
 		transform-origin: left top;
+		z-index: 40000;
+		display: none;
+
+		@include atL {
+			display: block;
+		}
 	}
 
 	&__wrapper {
+		transform: translateY(-100%);
 		position: fixed;
 		top: 0;
 		left: 0;
 		height: 88vh;
 		width: 100%;
 		background: $primary;
-		padding: 50px;
+		padding: 60px;
 		z-index: 30000;
 		overflow: auto;
+		transition: all 1s ease-in-out;
 
 		@include atS {
 			height: 75%;
@@ -76,6 +39,11 @@
 			width: 50%;
 			text-align: right;
 			padding: 90px;
+			transform: translateX(-100%);
+		}
+
+		&--visible {
+			transform: translateX(0) translateY(0) !important;
 		}
 	}
 
@@ -84,7 +52,10 @@
 		min-height: 100%;
 		color: #fff;
 		font-size: rem(18);
-		padding-bottom: 200px;
+		padding-bottom: 150px;
+		transition: opacity .5s, transform .5s;
+		transform: scale(0.9);
+		opacity: 0;
 
 		@include atS {
 			font-size: rem(22);
@@ -114,14 +85,24 @@
 	}
 
 	&__bg {
+		cursor: pointer;
+		z-index: -1;
 		background: $accent;
 		position: fixed;
 		height: 100%;
 		width: 100%;
-		opacity: .85;
-		z-index: 20000;
 		left: 0;
 		top: 0;
+		opacity: 0;
+		transition: all 0.7s;
+		visibility: hidden;
+		transition-delay: .2s;
+
+		&--visible {
+			opacity: .85;
+			visibility: visible;
+			z-index: 20000;
+		}
 	}
 
 	&__contacts {
@@ -159,6 +140,23 @@
 				font-size: rem(27);
 			}
 		}
+	}
+
+
+
+	&--open {
+		width: auto;
+
+		.menu__contact--rt {
+			opacity: 0;
+		}
+
+		.menu__content {
+			opacity: 1;
+			transform: scale(1);
+		}
+
+		
 	}
 
 }

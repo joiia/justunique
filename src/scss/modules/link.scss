@@ -1,9 +1,11 @@
 .link {
 	cursor: pointer;
-	//text-decoration: underline;
+	transition: all .5s;
+
 	&:after {
-		content: '';
 		@include size(100%, 1px);
+		content: '';
+		transition: all .5s;
 		position: absolute;
 		left: 0;
 		bottom: -2px;
@@ -14,6 +16,13 @@
 		color: $primary-l;
 		&:after { 
 			background: $primary-l;
+		}
+
+		&:hover {
+			color: #fff;
+			&:after { 
+				background: #fff;
+			}
 		}
 	}
 
