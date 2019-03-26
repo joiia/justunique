@@ -11,7 +11,7 @@
 		top: 0;
 		right: 0;
 
-		@include atM {
+		@include atL {
 			@include size(300px, 120px);
 		}
 	}
@@ -21,7 +21,7 @@
 		bottom: 0;
 		left: 0;
 
-		@include atM {
+		@include atL {
 			@include size(268px, 268px);
 			background-size: 18px;
 			bottom: -88px;
@@ -33,8 +33,8 @@
 		top: 0;
 		left: 0;
 
-		@include atM {
-			@include size(268px, 168px);
+		@include atL {
+			@include size(268px, 108px);
 			background-size: 18px;
 		}
 	}
@@ -44,10 +44,10 @@
 		bottom: 0;
 		right: 0;
 
-		@include atM {
-			@include size(268px, 268px);
+		@include atL {
+			@include size(268px, 108px);
 			background-size: 18px;
-			bottom: -80px;
+			bottom: 0px;
 		}
 	}
 
@@ -56,10 +56,9 @@
 		top: 0;
 		right: 0;
 
-		@include atM {
-			@include size(268px, 268px);
+		@include atL {
+			@include size(268px, 130px);
 			background-size: 18px;
-			bottom: -80px;
 		}
 	}
 
@@ -68,10 +67,9 @@
 		bottom: 0;
 		right: left;
 
-		@include atM {
-			@include size(268px, 268px);
+		@include atL {
+			@include size(268px, 78px);
 			background-size: 18px;
-			bottom: -80px;
 		}
 	}
 
@@ -106,7 +104,7 @@
 			top: 36px;
 			left: 24px;
 
-			@include atL {
+			@include atXL {
 				top: 90px;
 				left: 162px;
 				@include size(18px);
@@ -134,7 +132,7 @@
 			left: 96px;
 		}
 
-		@include atL {
+		@include atXL {
 			height: 96px;
 			width: 144px;
 			left: 96px;
@@ -157,7 +155,7 @@
 			right: 162px;
 		}
 
-		@include atL {
+		@include atXL {
 			height: 96px;
 			width: 144px;
 			right: 24px;
@@ -177,7 +175,7 @@
 			width: 108px;
 		}
 
-		@include atL {
+		@include atXL {
 			height: 76px;
 			width: 178px;
 			left: 61px;
@@ -196,7 +194,7 @@
 		margin-bottom: 30px;
 		display: none;
 
-		@include atL {
+		@include atXL {
 			display: block;
 		}
 

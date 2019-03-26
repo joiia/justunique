@@ -14,6 +14,12 @@
  		//transform: translateZ(0) scale(1) rotate(.0001deg);
  	}
 
+	&--m {
+ 		@include atL {
+ 			font-size: rem(30);
+ 		}
+	}
+
  	&--l {
  		font-size: rem(36);
  		padding-bottom: 60px;
@@ -26,5 +32,15 @@
 
  	&--regular {
  		font-weight: 600;
+ 	}
+
+ 	&--l-cent {
+ 		@include atL {
+			text-align: center;
+ 		}
+ 	}
+
+ 	&--pdd-no {
+ 		padding: 0 !important;
  	}
  }

@@ -19,7 +19,7 @@
 		max-width: 960px;
 	}
 
-	@include atL {
+	@include atXL {
 		max-width: 1140px;
 	}
 }
@@ -33,7 +33,6 @@
 }
 
 .container--narrow {
-
 	@include atM {
 		max-width: 640px;
 	}
@@ -41,12 +40,22 @@
 	@include atL {
 		max-width: 840px;
 	}
+
+	@include atXL {
+		max-width: 960px;
+	}
 }
 
 .row {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -15px;
+}
+
+.no-gutters {
+	.col {
+		padding: 0;
+	}
 }
 
 .col {
@@ -64,6 +73,12 @@
 	flex: 0 0 66.66666%;
 	max-width: 66.66666%;
 }
+
+.col-12 {
+	flex: 0 0 100%;
+	max-width: 100%;
+}
+
 
 .col-l-3 {
 	@include atL {

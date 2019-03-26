@@ -59,5 +59,9 @@
 
 	&__item {
 		position: relative;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 }

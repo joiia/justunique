@@ -57,3 +57,17 @@ ul, li {
   align-items: center;
   height: 100%;
 }
+
+.rub {
+  font-size: .75em;
+  position: relative;
+  top: -1px;
+
+  @include atL {
+    top: -3px;
+  }
+}
+
+.lg {
+  font-size: 1.25em;
+}
