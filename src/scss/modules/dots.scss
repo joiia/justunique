@@ -64,11 +64,22 @@
 
 	&--prc-bottom {
 		@include size(120px, 48px);
-		bottom: 0;
+		bottom: -8px;
 		right: left;
 
 		@include atL {
 			@include size(268px, 78px);
+			background-size: 18px;
+		}
+	}
+
+	&--prtf-top {
+		@include size(120px, 24px);
+		top: 0;
+		left: 0;
+
+		@include atL {
+			@include size(268px, 130px);
 			background-size: 18px;
 		}
 	}

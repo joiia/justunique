@@ -1,4 +1,5 @@
 .link {
+	position: relative;
 	cursor: pointer;
 	transition: all .5s;
 
@@ -12,8 +13,17 @@
 		display: block;
 	}
 
+	&--primary {
+		color: $primary;
+
+		&:after { 
+			background: $primary;
+		}
+	}
+
 	&--primary-l {
 		color: $primary-l;
+
 		&:after { 
 			background: $primary-l;
 		}

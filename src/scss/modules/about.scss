@@ -10,13 +10,11 @@
 		padding-left: 470px;
 		padding-top: 50px;
 	}
-
-	&__col {
-		
-	}
-
+	
 	&__col--1 {
-		padding-right: 30px;
+		@include atS {
+			padding-right: 30px;
+		}
 	}
 
 	&__col--2 {

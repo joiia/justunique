@@ -3,9 +3,10 @@
  	font-size: rem(24);
  	line-height: 1;
  	padding-bottom: 25px;
+ 	position: relative;
  	//transform: translate3d(10px,0,0) scale(.85) rotate(.0001deg);
 
- 	@include atL {
+ 	@include atXL {
  		font-size: rem(40);
  		padding-bottom: 36px;
  	}
@@ -14,19 +15,24 @@
  		//transform: translateZ(0) scale(1) rotate(.0001deg);
  	}
 
-	&--m {
+ 	&--m {
+
  		@include atL {
+ 			font-size: rem(28);
+ 		}
+
+ 		@include atXL {
  			font-size: rem(30);
  		}
-	}
+ 	}
 
  	&--l {
  		font-size: rem(36);
  		padding-bottom: 60px;
 
  		@include atL {
- 			font-size: rem(50);
- 			padding-bottom: 80px;
+ 			font-size: rem(50) !important;
+ 			padding-bottom: 80px !important;
  		}
  	}
 
@@ -36,11 +42,19 @@
 
  	&--l-cent {
  		@include atL {
-			text-align: center;
+ 			text-align: center;
  		}
  	}
 
  	&--pdd-no {
  		padding: 0 !important;
+ 	}
+
+ 	&--pdd-b-l {
+ 		padding-bottom: 40px;
+
+ 		@include atXL {
+ 			padding-bottom: 75px;
+ 		}
  	}
  }

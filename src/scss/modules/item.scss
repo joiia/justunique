@@ -19,8 +19,11 @@
 	&--brd {
 		border-bottom: 1px solid $grey;
 
-		@include atL {
+		@include atM {
 			border-bottom: none;
+		}
+
+		@include atXL {
 			border-right: 1px solid $grey;
 		}
 	}
@@ -34,12 +37,21 @@
 		margin: 0 20px 35px;
 
 		@include atL {
-			margin: 0;
+			margin: 0 0 80px;
+			text-align: center;
+			padding: 15px;
+		}
+		@include atXL {
+			text-align: left;
 			padding: 25px;
 		}
 
 		.text {
 			@include atL {
+				min-height: 100px;
+			}
+
+			@include atXL {
 				min-height: 90px;
 			}
 		}
@@ -48,8 +60,8 @@
 
 
 .col:last-child {
-	.item {
-		margin-bottom: 0;
+	.item--price {
+		margin-bottom: 50px;
 		padding-bottom: 0;
 	}
 
