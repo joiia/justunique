@@ -19,16 +19,20 @@
 		}
 	}
 
+	&--pdd-0 {
+		padding-bottom: 0;
+	}
+
 	&--full {
-		height: 100vh;
-		min-height: 400px;
+		min-height: 100vh;
+		//min-height: 400px;
 
 		@include atXS {
-			min-height: 510px;
+			//min-height: 510px;
 		}
 
 		@include atS {
-			min-height: 630px;
+			//min-height: 630px;
 		}
 	}
 	
@@ -42,20 +46,32 @@
 
 		.bg-svg {
 			@include centered;
-			width: 170%;
-			height: 120%;
+			height: 110%;
+			width: 1500px;
 			transform: translateX(-40%) translateY(-50%);
+
+			@include atS {
+				width: 3000px;
+				height: 120%;
+				transform: translateX(-40%) translateY(-50%);
+			}
+
+			@include atXL {
+				width: 170%;
+				height: 120%;
+				transform: translateX(-40%) translateY(-50%);
+			}
 		}
 
 		use.bg {
 			fill: #000;
-			opacity: .025;
+			opacity: .028;
 		}
 	}
 
 
 	&--main {
-		height: calc(100vh - 50px);
+		min-height: calc(100vh - 50px);
 
 		@include atL {
 			min-height: 100vh;

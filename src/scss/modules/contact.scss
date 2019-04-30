@@ -1,0 +1,88 @@
+.contact {
+	font-size: rem(20);
+	padding-bottom: 0;
+
+	&__title {
+		display: none;
+		padding-top: 60px;
+
+		@include atM {
+			display: block;
+		}
+	}
+
+	.row {
+		@include atM {
+			flex-direction: row-reverse;
+		}
+	}
+
+	.block {
+		background: transparent;
+		padding: 0 20px;
+
+		@include atM {
+			padding: 70px 75px 90px !important;
+		}
+
+		@include atXL {
+			padding: 80px 85px 100px !important;
+		}
+
+		&:before {
+			left: 0 !important;
+		}
+	}
+
+	div {
+		margin-bottom: 10px;
+		text-align: center;
+
+		@include atM {
+			text-align: left;
+		}
+
+	}
+
+	a {
+		color: #000;
+	}
+
+	&__phone {
+		letter-spacing: .03rem;
+
+		@include atM {
+			padding-bottom: 8px;
+		}
+	}
+
+	&__social {
+		padding-top: 25px;
+		padding-bottom: 20px;
+
+		@include atXS {
+			padding-bottom: 0 !important;
+		}
+
+		li {
+			display: inline-block;
+			font-size: rem(30);
+			margin: 0 10px;
+
+			@include atM {
+				margin: 0 20px 0 0;
+			}
+
+			a {
+				color: $accent;
+				display: block;
+				transition: color .5s;
+				
+				&:hover {
+					color: $primary;
+				}
+
+			}
+		}
+	}
+}

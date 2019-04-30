@@ -1,9 +1,12 @@
 .portfolio {
+	padding-bottom: 0 !important;
+
 	&__item {
 		overflow: hidden;
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		cursor: pointer;
 
 		@include atL {
 			height: 225px;
@@ -12,6 +15,7 @@
 		&__img {
 			img {
 				max-width: 100%;
+				width: 100%;
 				height: auto;
 				display: block;
 			}

@@ -19,15 +19,14 @@
       <div class="menu__wrapper">
         <div class="menu__content">
           <ul>
-            <li><a href="">преимущества</a></li>
-            <li><a href="">цены</a></li>
-            <li><a href="">услуги</a></li>
-            <li><a href="">портфолио</a></li>
-            <li><a href="">обратная связь</a></li>
+            <li><a data-scroll href="#features">преимущества</a></li>
+            <li><a data-scroll href="#price">цены</a></li>
+            <li><a data-scroll href="#portfolio">портфолио</a></li>
+            <li><a data-scroll href="#contact">обратная связь</a></li>
           </ul>
           <div class="menu__contacts">
-            <div>8 (925) 717-02-62</div>
-            <div>doit@justunique.ru</div>
+            <div><a href="">8 (925) 717-02-62</a></div>
+            <div><a href="">doit@justunique.ru</a></div>
             <div class="menu__social">
               <ul>
                 <li><a href=""><i class="fab fa-viber"></i></a></li>
@@ -233,7 +232,7 @@
   <div class="dots dots--prc-bottom"></div>
 </section>
 
-<section id="portfolio" class="section section--pdd-s portfolio">
+<section id="portfolio" class="section section--pdd-s section--pdd-0 portfolio">
   <div class="container-fluid pdd-0">
     <h2 class="title title--l centered title--pdd-b-l">
       Портфолио<span class="color">.</span>
@@ -328,13 +327,62 @@
 <div class="dots dots--prtf-top"></div>
 </section>
 
-<section class="section">
+<section id="contact" class="section section--grey section--img section--full contact">
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col col-12 col-lg-7">
+        <div class="contact__form block block--white block--pdd-b-l">
+          <h2 class="title title--m">Обратная связь</h2>
+          <form action="" class="form">
+            <div class="form__line">
+              <label class="form__input-wrapper">
+                <span class="form__input-placeholder">Ваше имя</span>
+                <input type="text" name="name" data-required="true">
+              </label>
+            </div>
+            <div class="form__line">
+              <label class="form__input-wrapper">
+                <span class="form__input-placeholder">Email</span>
+                <input type="text" name="name" data-required="true">
+              </label>
+            </div>
+            <div class="form__line">
+              <label class="form__input-wrapper">
+                <span class="form__input-placeholder">Телефон</span>
+                <input type="text" name="name" data-required="true">
+              </label>
+            </div>
+            <div class="form__line">
+              <label class="form__input-wrapper ">
+                <span class="form__input-placeholder form__input-placeholder--focus">Сообщение</span>
+                <input type="text" name="name" data-required="true">
+              </label>
+            </div>
+            <div class="form__line form__line--submit">
+              <div class="button-wrap"><input type="submit" value="Отправить"></div>
+            </div>
+          </form>
+        </div>
       </div>
+      <div class="col col-12 col-lg-5">
+        <h2 class="title title--l contact__title">Контакты<span class="color">.</span></h2>
+        <div class="contact__phone"><a href="">8 (925) 717-02-62</a></div>
+        <div class="contact__email"><a href="">doit@justunique.ru</a></div>
+        <div class="contact__social">
+          <ul>
+            <li><a href=""><i class="fab fa-viber"></i></a></li>
+            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+            <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+            <li><a href=""><i class="fab fa-vk"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      
     </div>
   </div>
+  <svg class="bg-svg">
+    <use class="bg" xlink:href="/assets/img/sprite.svg#bg" />
+  </svg>
 </section>
 
 <footer>

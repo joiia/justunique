@@ -49,7 +49,7 @@
 		transform: rotate(90deg) translate(10px);
 
 		@include atL {
-			transform: rotate(360deg) translate(10px);
+			transform: rotate(0deg) translate(10px);
 		}
 
 		.burger__bar {

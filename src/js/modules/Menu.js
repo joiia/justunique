@@ -1,11 +1,11 @@
 
-
-class MobileMenu {
+class Menu {
     constructor() {
     	this.burger = $('.burger');
     	this.menu = $('.menu');
     	this.wrap = $('.menu__wrapper');
     	this.bg = $('.menu__bg');
+        this.menuLink = $('.menu li a');
 
     	this.events();
     }
@@ -13,6 +13,7 @@ class MobileMenu {
     events() {
     	this.burger.on('click', this.toggleMenu.bind(this));
     	this.bg.on('click', this.toggleMenu.bind(this));
+        this.menuLink.on('click', this.toggleMenu.bind(this));
     }
 
     toggleMenu() {
@@ -23,4 +24,4 @@ class MobileMenu {
     }
 }
 
-var mobileMenu = new MobileMenu();
+export default Menu;

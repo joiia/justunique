@@ -1,5 +1,7 @@
 .menu {
 
+	padding: 0 20px;
+
 	&__contact--rt {
 		font-size: rem(14);
 		transform: rotate(-90deg);
@@ -21,7 +23,7 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		height: 88vh;
+		height: 90vh;
 		width: 100%;
 		background: $primary;
 		padding: 60px;
@@ -30,13 +32,13 @@
 		transition: all 1s ease-in-out;
 
 		@include atS {
-			height: 75%;
+			height: 70vh;
 			padding: 70px;
 		}
 
 		@include atL {
-			height: 100%;
 			width: 50%;
+			height: 100vh !important;
 			text-align: right;
 			padding: 90px;
 			transform: translateX(-100%);
@@ -122,16 +124,35 @@
 		> div:first-child {
 			letter-spacing: .025em;
 		}
+
+		a {
+			color: $primary-l;
+			transition: color .5s;
+			
+			&:hover {
+				color: #fff;
+			}
+		}
 	}
 
 	&__social {
 		line-height: 1;
 		font-size: rem(20);
 		padding-top: 30px;
+
 		li {
 			display: inline-block;
 			margin-right: 15px;
 			margin-bottom: 0;
+
+			a {
+				color: $primary-l;
+				transition: color .5s;
+				
+				&:hover {
+					color: #fff;
+				}
+			}
 
 			@include atL {
 				margin-right: 0;
