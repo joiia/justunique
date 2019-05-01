@@ -2,24 +2,25 @@
 	width: 100%;
 	max-width: 265px;
 	margin: 0 auto;
-	padding-top: 25px;
 	
 	@include atXS {
 		max-width: 500px;
-		padding-top: 90px;
 	}
 
 	@include atS {
-		padding-top: 50px;
 	}
 
 	@include atL {
-		padding-top: 80px;
 		max-width: 580px;
 	}
 
 	@include atXL {
 		max-width: 480px;
+		padding-top: 30px;
+	}
+
+	@include atXXL {
+		padding-top: 0;
 	}
 
 	&__img {

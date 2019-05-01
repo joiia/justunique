@@ -60,6 +60,7 @@
 		text-transform: uppercase;
 		color: #fff;
 		line-height: 64px;
+		width: 100%;
 		max-width: 100%;
 		padding: 0 20px;
 		height: 60px;
@@ -73,29 +74,13 @@
 		@include atL {
 			width: 230px;
 			margin-bottom: 0;
-		}
 
-		&:hover {
-			box-shadow: 0 1.5em 1.5em -0.9em rgba(186,184,186,.7);
-			top: -5px;
+			&:hover {
+				box-shadow: 0 1.5em 1.5em -0.9em rgba(186,184,186,.7);
+				top: -5px;
+			}
 		}
-
 
 	}
 
-	.button-wrapp {
-		position: relative;
-		&:after {
-			z-index: 1;
-			content: "";
-			bottom: -10px;
-			right: 10%;
-			position: absolute;
-			height: 5px;
-			width: 80%;
-			box-shadow: 0px 0px 5px 5px rgba(186,184,186,.7);
-			background: rgba(186,184,186,.7);
-			border-radius: 100%;
-		}
-	}
 }
