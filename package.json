@@ -47,11 +47,13 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "gsap": "^2.1.2",
+    "imports-loader": "^0.8.0",
     "scrollmagic": "^2.0.6",
     "smooth-scroll": "^16.0.3",
     "vue": "^2.6.8",
     "vuex": "^3.1.0"
   },
-  "author": "",
-  "description": ""
-}
+    "author": "",
+    "description": ""
+  }

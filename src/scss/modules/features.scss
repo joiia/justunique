@@ -60,8 +60,16 @@
 	&__item {
 		position: relative;
 
+		@include atXL {
+			margin-bottom: 150px;
+		}
+
 		&:last-child {
 			margin-bottom: 0;
+		}
+
+		&--visible {
+
 		}
 	}
 }

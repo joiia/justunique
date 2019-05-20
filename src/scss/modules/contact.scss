@@ -47,6 +47,14 @@
 		margin-bottom: 10px;
 		text-align: center;
 
+		opacity: 0;
+		transition: all 2s !important;
+
+		&.visible {
+			opacity: 1;
+		}
+
+
 		@include atM {
 			text-align: left;
 		}

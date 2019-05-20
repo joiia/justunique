@@ -27,14 +27,14 @@
 		font-size: rem(16);
 		position: absolute;
 		left: 0;
-		bottom: 10px;
+		bottom: 15px;
 		color: $grey-dd;
 		transition: all .5s;
 		transform: translateY(0);
 
 		&--focus {
 			transform: translateY(-30px);
-			font-size: rem(14);
+			font-size: rem(12);
 		}
 	}
 	
@@ -43,7 +43,7 @@
 		width: 100%;
 		line-height: 40px;
 		position: relative;
-		top: 20px;
+		top: 16px;
 		background: transparent;
 		border: none;
 		font-size: rem(16);
@@ -81,6 +81,12 @@
 			}
 		}
 
+	}
+
+
+	input:-webkit-autofill {
+		background-color: #fff !important;
+		-webkit-box-shadow: 0 0 0 30px white inset !important;
 	}
 
 }

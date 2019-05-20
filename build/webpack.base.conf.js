@@ -45,44 +45,44 @@ module.exports = {
     }, {
       test: /\.scss$/,
       use: [
-        'style-loader',
-        MiniCssExtractPlugin.loader,
-        {
-          loader: 'css-loader',
-          options: { sourceMap: true }
-        }, {
-          loader: 'postcss-loader',
-          options: { sourceMap: true, config: { path: `${PATHS.src}/js/postcss.config.js` } }
-        }, {
-          loader: 'sass-loader',
-          options: { sourceMap: true }
-        }
+      'style-loader',
+      MiniCssExtractPlugin.loader,
+      {
+        loader: 'css-loader',
+        options: { sourceMap: true }
+      }, {
+        loader: 'postcss-loader',
+        options: { sourceMap: true, config: { path: `${PATHS.src}/js/postcss.config.js` } }
+      }, {
+        loader: 'sass-loader',
+        options: { sourceMap: true }
+      }
       ]
     }, {
       test: /\.css$/,
       use: [
-        'style-loader',
-        MiniCssExtractPlugin.loader,
-        {
-          loader: 'css-loader',
-          options: { sourceMap: true }
-        }, {
-          loader: 'postcss-loader',
-          options: { sourceMap: true, config: { path: `${PATHS.src}/js/postcss.config.js` } }
-        }
+      'style-loader',
+      MiniCssExtractPlugin.loader,
+      {
+        loader: 'css-loader',
+        options: { sourceMap: true }
+      }, {
+        loader: 'postcss-loader',
+        options: { sourceMap: true, config: { path: `${PATHS.src}/js/postcss.config.js` } }
+      }
       ]
     }]
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.js'
+      'vue$': 'vue/dist/vue.js',
     }
   },
   plugins: [
-    new VueLoaderPlugin(),
-    new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].css`,
-    }),
+  new VueLoaderPlugin(),
+  new MiniCssExtractPlugin({
+    filename: `${PATHS.assets}css/[name].css`,
+  }),
     // Copy HtmlWebpackPlugin and change index.html for another html page
     new HtmlWebpackPlugin({
       hash: false,
@@ -92,6 +92,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/static`, to: '' },
-    ])
-  ],
-}
+      ])
+    ],
+
+  }
