@@ -108,6 +108,12 @@ img {
   text-align: center;
 }
 
+.centered-l {
+  @include atL {
+
+  }
+}
+
 .cen-v {
   display: flex;
   align-items: center;

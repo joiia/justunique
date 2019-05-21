@@ -9,15 +9,34 @@
 		cursor: pointer;
 
 		@include atL {
+			height: 200px;
+		}
+
+		@include atXL {
 			height: 225px;
 		}
 
+		@include atXXL {
+			height: 300px;
+		}
+
+
 		&__img {
+			height: 100%;
+
 			img {
 				max-width: 100%;
 				width: 100%;
 				height: auto;
 				display: block;
+
+				@include atXXL {
+					max-width: 1000px !important;
+					width: auto !important;
+					min-height: 100% !important;
+					min-width: 100%;
+				}
+
 			}
 		}
 

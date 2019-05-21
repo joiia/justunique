@@ -1,27 +1,32 @@
 
 .popup {
 	transform: translateX(100%) translateY(100%) scale(0);
-	transition: opacity .1s, transform 1s;
+	transition: opacity 3s, transform 1s;
 	position: fixed;
-	left: 100px;
+	width: 100%;
 	top: 0;
 	width: 100%;
-	width: calc(100% -100px);
 	height: 100%;
 	z-index: 100;
+
+	@include atL {
+		left: 100px;
+		width: calc(100% -100px);
+	}
 
 	&:after {
 		content: "";
 		position: absolute;
 		height: 500vh !important;
 		width: 500vh !important;
-		background: #fff;
 		top: 50%;
 		height: 50%;
 		border-radius: 100%;
 		transform: translateX(-50%) translateY(-50%) scale(1);
 		background: $accent;
-		transition: transform 2s, opacity .5s, background 3s;
+		opacity: 1;
+		transition: transform 2s, opacity 1s, background 3s;
+		transition-delay: 0s, 1s, 0s;
 	}
 
 	&--visible {
@@ -29,8 +34,9 @@
 		transform: translateX(0) translateY(0) scale(1);
 
 		&:after {
-			background: #fff;
 			transform: translateX(-50%) translateY(-50%) scale(5);
+			opacity: 0;
+			background: #fff;
 		}
 	}
 
@@ -38,8 +44,13 @@
 		overflow: hidden;
 		overflow-y: auto;
 		height: 100%;
-		padding: 7rem 10rem;
+		padding: 1.5rem 0;
 		position: relative;
+		background: #fff;
+
+		@include atL {
+			padding: 7rem 10rem;
+		}
 	}
 	
 	&__nav {
