@@ -17,7 +17,7 @@ const Animations = () => {
 	const features = $('#features')
 	const featuresTitles = $('.features .col');
 	const featuresIcons = $('.features .col-4');
-	const title = $('.title, .list li, .text, #contact div');
+	const title = $('.title, .list li, .text, #contact div, .fade-in');
 	const price = $('#price');
 	const priceItems = $('#price .item');
 	const priceDesc = $('#price .block');
@@ -36,10 +36,10 @@ const Animations = () => {
 			triggerHook: 0,
 			duration: '100%'
 		})
-		.addIndicators({
-			name: 'mainscreen',
-			colorTrigger: 'green'
-		})
+		// .addIndicators({
+		// 	name: 'mainscreen',
+		// 	colorTrigger: 'green'
+		// })
 		.setTween(tl)
 		.addTo(controller);
 	})();
@@ -54,10 +54,6 @@ const Animations = () => {
 			duration: '0',
 			reverse: false
 		})
-		// .addIndicators({
-		// 	name: 'features',
-		// 	colorTrigger: 'green'
-		// })
 		.setTween(tl)
 		.addTo(controller);
 	})();
@@ -70,10 +66,6 @@ const Animations = () => {
 				triggerHook: 1,
 				duration: '0',
 				reverse: false
-			})
-			.addIndicators({
-				name: 'title',
-				colorTrigger: 'violet'
 			})
 			.setClassToggle(item, 'visible')
 			.addTo(controller);
@@ -88,10 +80,6 @@ const Animations = () => {
 				triggerHook: 1,
 				duration: '0',
 				reverse: false,
-			})
-			.addIndicators({
-				name: 'price',
-				colorTrigger: 'green'
 			})
 			.setClassToggle(item, 'visible')
 			.addTo(controller);

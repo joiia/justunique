@@ -2,6 +2,7 @@
 	position: relative;
 	cursor: pointer;
 	transition: all .5s;
+	display: inline-block;
 
 	&:after {
 		@include size(100%, 1px);
@@ -34,6 +35,18 @@
 				background: #fff;
 			}
 		}
+	}
+
+	&--accent {
+		color: $accent;
+
+		&:after { 
+			background: $accent;
+		}
+	}
+
+	&--lg {
+		font-size: rem(24)
 	}
 
 

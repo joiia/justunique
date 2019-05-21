@@ -1,18 +1,12 @@
  .title {
- 	transition: transform .5s;
  	font-size: rem(24);
  	line-height: 1;
  	padding-bottom: 25px;
  	position: relative;
- 	//transform: translate3d(10px,0,0) scale(.85) rotate(.0001deg);
 
  	@include atXL {
  		font-size: rem(40);
  		padding-bottom: 36px;
- 	}
-
- 	.show {
- 		//transform: translateZ(0) scale(1) rotate(.0001deg);
  	}
 
  	&--m {

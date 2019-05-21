@@ -1,0 +1,17 @@
+.portfolio-single {
+	display: none;
+
+	&__desc {
+		padding-right: 15px;
+	}
+	&__text {
+		padding-bottom: 30px;
+	}
+	&__img {
+		box-shadow: 0 0 55px rgba(0, 0, 0, 0.15);
+
+		img {
+			display: block;
+		}
+	}
+}

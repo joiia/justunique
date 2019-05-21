@@ -1,0 +1,107 @@
+
+.popup {
+	transform: translateX(100%) translateY(100%) scale(0);
+	transition: opacity .1s, transform 1s;
+	position: fixed;
+	left: 100px;
+	top: 0;
+	width: 100%;
+	width: calc(100% -100px);
+	height: 100%;
+	z-index: 100;
+
+	&:after {
+		content: "";
+		position: absolute;
+		height: 500vh !important;
+		width: 500vh !important;
+		background: #fff;
+		top: 50%;
+		height: 50%;
+		border-radius: 100%;
+		transform: translateX(-50%) translateY(-50%) scale(1);
+		background: $accent;
+		transition: transform 2s, opacity .5s, background 3s;
+	}
+
+	&--visible {
+		opacity: 1;
+		transform: translateX(0) translateY(0) scale(1);
+
+		&:after {
+			background: #fff;
+			transform: translateX(-50%) translateY(-50%) scale(5);
+		}
+	}
+
+	&__inner {
+		overflow: hidden;
+		overflow-y: auto;
+		height: 100%;
+		padding: 7rem 10rem;
+		position: relative;
+	}
+	
+	&__nav {
+		position: relative;
+		height: 30px;
+		padding-bottom: 7rem;
+	}
+
+	&__arrows {
+		position: absolute;
+		top: 0;
+		right: 20px;
+	}
+	&__arrow {
+		cursor: pointer;
+		padding: 10px;
+		display: inline-block;
+		width: 30px;
+
+		&:after {
+			content: "";
+			width: 30px;
+			height: 30px;
+			border: solid #000;
+			border-width: 0 1px 1px 0;
+			transform: rotate(135deg);
+			-webkit-transform: rotate(135deg);
+			display: inline-block;
+			opacity: .3;
+			transition: all .5s;
+		}
+		
+		&--next {
+			&:after {
+				transform: rotate(-45deg);
+				-webkit-transform: rotate(-45deg);	
+			}
+		}
+
+		&:hover {
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__content div {
+		animation: slide 1s;
+	}
+}
+
+body.fixed {
+	overflow: hidden;
+}
+
+@keyframes slide {
+	from {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
